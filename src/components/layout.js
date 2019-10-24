@@ -10,7 +10,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "../styles/tailwind.css"
+import "../styles/global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,21 +27,31 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+      <main>{children}</main>
+      <footer className="bg-black text-gray-300 text-center font-sans tracking-wide text-sm w-full">
+        <div className="my-6 px-3">
+          © {new Date().getFullYear()} Marcelo Fernandes |{" "}
+          <a href="/" className="text-blue-600 hover:underline">
+            Site{" "}
+          </a>
+          built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+          <a
+            href="https://www.gatsbyjs.org"
+            className="text-blue-600 hover:underline"
+          >
+            Gatsby
+          </a>{" "}
+          and {` `}
+          <a
+            href="https://tailwindcss.com"
+            className="text-blue-600 hover:underline"
+          >
+            TailwindCSS
+          </a>
+          .
+        </div>
+      </footer>
     </>
   )
 }

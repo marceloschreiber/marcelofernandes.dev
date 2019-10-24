@@ -1,35 +1,63 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
+import { HamburgerSqueeze } from "react-animated-burgers"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+function Header({ siteTitle }) {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <header className="bg-black antialised shadow-md text-gray-100 font-mono ">
+        <div className="container mx-auto h-20 flex items-center justify-between px-4">
+          <h1 className="text-2xl md:text-3xl font-bold font-sans pl-3 sm:pl-0">
+            <Link to="/">{siteTitle}</Link>
+          </h1>
+          <nav className="uppercase font-semibold">
+            <div className="sm:hidden">
+              <HamburgerSqueeze
+                buttonWidth={25}
+                barColor="white"
+                isActive={isOpen}
+                onClick={() => setIsOpen(!isOpen)}
+                className="burguer-btn"
+              />
+            </div>
+            <Link to="/" className="ml-10 hover:text-blue-700 hidden sm:inline">
+              Blog
+            </Link>
+            <Link
+              to="/about"
+              className="ml-10 hover:text-blue-700 hidden sm:inline"
+            >
+              About
+            </Link>
+          </nav>
+        </div>
+        <nav
+          className={`sm:hidden text-center uppercase font-semibold burguer-menu bg-black w-full ${
+            isOpen ? "burguer-menu-show" : "burguer-menu-hide"
+          }`}
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+          <Link
+            to="/"
+            className="block hover:text-blue-700 hover:underline py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/about"
+            className="block hover:text-blue-700 hover:underline py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+        </nav>
+      </header>
+    </>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
