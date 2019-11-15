@@ -31,7 +31,10 @@ const Layout = ({ children }) => {
       <footer className="bg-black text-gray-300 text-center font-sans tracking-wide text-sm w-full">
         <div className="my-6 px-3">
           © {new Date().getFullYear()} Marcelo Fernandes |{" "}
-          <a href="/" className="text-blue-600 hover:underline">
+          <a
+            href="https://github.com/marceloschreiber/marcelofernandes.dev"
+            className="text-blue-600 hover:underline"
+          >
             Site{" "}
           </a>
           built with
