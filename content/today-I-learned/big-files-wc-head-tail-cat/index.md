@@ -12,19 +12,19 @@ These were the original files:
 
 ```xml
 <!-- file1.xml -->
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
     <!-- content of file 1 -->
 </root>
 
 <!-- file2.xml -->
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
     <!-- content of file 2 -->
 </root>
 
 <!-- file3.xml -->
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
     <!-- content of file 3 -->
 </root>
@@ -36,7 +36,7 @@ My goal was to have this:
 
 ```xml
 <!-- huge_file.xml -->
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
     <!-- content of file 1 -->
     <!-- content of file 2 -->
@@ -50,18 +50,18 @@ Since I couldn't open the files I used the command line, more precisely the GNU 
 
 ```bash
 $ wc -c file1.xml
-#83 file1.xml
+#84 file1.xml
 
-$ head -c 76 file1.xml > new_file1.xml
+$ head -c 77 file1.xml > new_file1.xml
 ```
 
 `wc -c` returns the number of character in the file. `head -c n` return the top **n** characters of the file. So I returned the total amount of characters minus 7 (\</root>). Finally, the `>` redirects the output to a **new_file1.xml**.
 
-### Step 2: Remove the <?xml...> and \</root> from the second file
+### Step 2: Remove the <?xml...?> and \</root> from the second file
 
 ```bash
 $ wc -c file2.xml
-#83 file2.xml
+#84 file2.xml
 
 $ tail -c 38 file2.xml > new_file2_temp.xml
 $ wc -c new_file2_temp.xml
@@ -71,11 +71,11 @@ $ head -c 31 new_file2_temp.xml > new_file2.xml
 
 By now you probably guessed what `tail -c` does. The same principle applies, the difference is that the I used an intermediate file to be extra save.
 
-### Step 3: Remove the <?xml ...> for the third file
+### Step 3: Remove the <?xml ...?> for the third file
 
 ```bash
 $ wc -c file3.xml
-#83 file3.xml
+#84 file3.xml
 $ tail -c 38 file3.xml > new_file3.xml
 ```
 
@@ -88,7 +88,7 @@ $ cat new_file1.xml new_file2.xml new_file3.xml > huge_file.xml
 Which gives me the file I wanted:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8">
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
     <!-- content of file 1 -->
     <!-- content of file 2 -->
