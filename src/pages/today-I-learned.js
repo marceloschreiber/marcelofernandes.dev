@@ -8,7 +8,7 @@ import { formatReadingTime } from "../utils/helpers"
 export default ({ data }) => {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title="Today I Learned" />
       <div className="max-w-3xl mx-auto font-sans px-6 py-10 first:mt-0 ">
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id} className="antialised mb-10">
@@ -29,10 +29,10 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query {
+  {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { slug: { regex: "/blog/" } } }
+      filter: { fields: { slug: { regex: "/today-I-learned/" } } }
     ) {
       edges {
         node {

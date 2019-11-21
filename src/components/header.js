@@ -27,6 +27,12 @@ function Header({ siteTitle }) {
               Blog
             </Link>
             <Link
+              to="/today-I-learned"
+              className="ml-10 hover:text-blue-700 hidden sm:inline"
+            >
+              Today I Learned
+            </Link>
+            <Link
               to="/about"
               className="ml-10 hover:text-blue-700 hidden sm:inline"
             >
@@ -45,6 +51,13 @@ function Header({ siteTitle }) {
             onClick={() => setIsOpen(false)}
           >
             Blog
+          </Link>
+          <Link
+            to="/today-I-learned"
+            className="block hover:text-blue-700 hover:underline py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            Today I Learned
           </Link>
           <Link
             to="/about"
