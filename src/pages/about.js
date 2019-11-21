@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,11 +23,14 @@ const AboutPage = () => (
         This is still a work in progress, but my idea is to split the content
         into a{" "}
         <strong>
-          <a href="/">Blog</a>
+          <Link to="/">Blog</Link>
         </strong>
         , which will contains longer articles, and a{" "}
-        <strong>Today I Learned</strong> which will contains small things that I
-        learned on my day to day life as a dev.
+        <strong>
+          <Link to="/today-I-learned">Today I Learned</Link>
+        </strong>{" "}
+        which will contains small things that I learned on my day to day life as
+        a dev.
       </p>
       <p>
         I also want this to be simple and fast, so I used a set of{" "}
