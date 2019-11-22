@@ -8,7 +8,7 @@ So at work we're in a project that requires manipulation of **large XML files**.
 
 Luckly for me one of my tasks was to generate an **even bigger** file by combining some already large XML files. 😃
 
-These were the original files:
+These were the format of the original files:
 
 ```xml
 <!-- file1.xml -->
