@@ -6,6 +6,21 @@ import { HamburgerSqueeze } from "react-animated-burgers"
 function Header({ siteTitle }) {
   const [isOpen, setIsOpen] = useState(false)
 
+  const menuItems = [
+    {
+      label: "Blog",
+      link: "/",
+    },
+    {
+      label: "Today I Learned",
+      link: "/today-I-learned",
+    },
+    {
+      label: "About",
+      link: "/about",
+    },
+  ]
+
   return (
     <>
       <header className="bg-black antialised shadow-md text-gray-100 font-mono ">
@@ -23,21 +38,14 @@ function Header({ siteTitle }) {
                 className="burguer-btn"
               />
             </div>
-            <Link to="/" className="ml-10 hover:text-blue-700 hidden sm:inline">
-              Blog
-            </Link>
-            <Link
-              to="/today-I-learned"
-              className="ml-10 hover:text-blue-700 hidden sm:inline"
-            >
-              Today I Learned
-            </Link>
-            <Link
-              to="/about"
-              className="ml-10 hover:text-blue-700 hidden sm:inline"
-            >
-              About
-            </Link>
+            {menuItems.map(menu => (
+              <Link
+                to={menu.link}
+                className="ml-10 hover:text-blue-700 hidden sm:inline"
+              >
+                {menu.label}
+              </Link>
+            ))}
           </nav>
         </div>
         <nav
@@ -45,27 +53,15 @@ function Header({ siteTitle }) {
             isOpen ? "burguer-menu-show" : "burguer-menu-hide"
           }`}
         >
-          <Link
-            to="/"
-            className="block hover:text-blue-700 hover:underline py-3"
-            onClick={() => setIsOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link
-            to="/today-I-learned"
-            className="block hover:text-blue-700 hover:underline py-3"
-            onClick={() => setIsOpen(false)}
-          >
-            Today I Learned
-          </Link>
-          <Link
-            to="/about"
-            className="block hover:text-blue-700 hover:underline py-3"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
+          {menuItems.map(menu => (
+            <Link
+              to={menu.link}
+              className="block hover:text-blue-700 hover:underline py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              {menu.label}
+            </Link>
+          ))}
         </nav>
       </header>
     </>
