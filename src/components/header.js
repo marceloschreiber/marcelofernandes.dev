@@ -9,7 +9,7 @@ function Header({ siteTitle }) {
   const menuItems = [
     {
       label: "Blog",
-      link: "/",
+      link: "/blog",
     },
     {
       label: "Today I Learned",
@@ -26,7 +26,7 @@ function Header({ siteTitle }) {
       <header className="bg-black antialised shadow-md text-gray-100 font-mono ">
         <div className="container mx-auto h-20 flex items-center justify-between px-4">
           <h1 className="text-2xl md:text-3xl font-bold font-sans pl-3 sm:pl-0">
-            <Link to="/">{siteTitle}</Link>
+            <Link to="/blog">{siteTitle}</Link>
           </h1>
           <nav className="uppercase font-semibold">
             <div className="sm:hidden">
@@ -42,6 +42,8 @@ function Header({ siteTitle }) {
               <Link
                 to={menu.link}
                 className="ml-10 hover:text-blue-700 hidden sm:inline"
+                activeClassName="text-blue-700"
+                partiallyActive={true}
               >
                 {menu.label}
               </Link>
