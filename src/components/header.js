@@ -41,8 +41,8 @@ function Header({ siteTitle }) {
             {menuItems.map(menu => (
               <Link
                 to={menu.link}
-                className="ml-10 hover:text-blue-700 hidden sm:inline"
-                activeClassName="text-blue-700"
+                className="ml-10 hover:text-blue-600 hidden sm:inline"
+                activeClassName="text-blue-600"
                 partiallyActive={true}
               >
                 {menu.label}
@@ -58,7 +58,7 @@ function Header({ siteTitle }) {
           {menuItems.map(menu => (
             <Link
               to={menu.link}
-              className="block hover:text-blue-700 hover:underline py-3"
+              className="block hover:text-blue-600 hover:underline py-3"
               onClick={() => setIsOpen(false)}
             >
               {menu.label}

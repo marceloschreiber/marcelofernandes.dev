@@ -23,7 +23,7 @@ const AboutPage = () => (
         This is still a work in progress, but my idea is to split the content
         into a{" "}
         <strong>
-          <Link to="/">Blog</Link>
+          <Link to="/blog">Blog</Link>
         </strong>
         , which will contains longer articles, and a{" "}
         <strong>

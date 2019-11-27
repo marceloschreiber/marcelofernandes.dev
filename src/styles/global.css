@@ -257,3 +257,16 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
+
+blockquote {
+  background-color: #fefcbf;
+  border-left-color: hsla(207, 95%, 15%, 1);
+  border-left-width: 9px;
+  border-left-style: solid;
+  margin: 0 -1.3125rem 1rem -1.3125rem;
+  padding: 1em 1em 1em 1.25em;
+}
+
+blockquote p {
+  margin: 0 !important;
+}
