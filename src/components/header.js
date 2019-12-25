@@ -26,7 +26,7 @@ function Header({ siteTitle }) {
       <header className="bg-black antialised shadow-md text-gray-100 font-mono ">
         <div className="container mx-auto h-20 flex items-center justify-between px-4">
           <h1 className="text-2xl md:text-3xl font-bold font-sans pl-3 sm:pl-0">
-            <Link to="/blog">{siteTitle}</Link>
+            <Link to="/about">{siteTitle}</Link>
           </h1>
           <nav className="uppercase font-semibold">
             <div className="sm:hidden">
