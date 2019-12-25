@@ -1,5 +1,5 @@
 ---
-title: "Saving the day: wc, head, tail, cat"
+title: "Saving the Day: wc, head, tail, cat"
 date: "2019-11-20"
 spoiler: Dealing with large files is a pain.
 ---
