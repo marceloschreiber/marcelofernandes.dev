@@ -34,9 +34,7 @@ const AboutPage = () => (
       </p>
       <p>
         I also want this to be simple and fast, so I used a set of{" "}
-        <strong>cool technologies</strong> to build this and I'm not adding any
-        code more than the necessary. Which means that I'm not tracking you or
-        anyone else.
+        <strong>cool technologies</strong> to build this.
       </p>
     </div>
   </Layout>

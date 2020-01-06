@@ -71,5 +71,11 @@ module.exports = {
         ignore: ["global.css", "prismjs/"],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-155359137-1",
+      }
+    }
   ],
 }
