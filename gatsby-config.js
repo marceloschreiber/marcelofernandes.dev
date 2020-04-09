@@ -75,7 +75,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-155359137-1",
-      }
-    }
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-5203333681361373`,
+      },
+    },
   ],
 }
