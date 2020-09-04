@@ -8,7 +8,7 @@ const Footer = () => (
       <OutboundLink
         href="https://github.com/marceloschreiber/marcelofernandes.dev"
         target="_blank"
-        className="text-blue-600 hover:underline"
+        className="text-blue-600 underline"
       >
         Site{" "}
       </OutboundLink>
@@ -17,7 +17,7 @@ const Footer = () => (
       <OutboundLink
         href="https://www.gatsbyjs.org"
         target="_blank"
-        className="text-blue-600 hover:underline"
+        className="text-blue-600 underline"
       >
         Gatsby
       </OutboundLink>{" "}
@@ -25,7 +25,7 @@ const Footer = () => (
       <OutboundLink
         href="https://tailwindcss.com"
         target="_blank"
-        className="text-blue-600 hover:underline"
+        className="text-blue-600 underline"
       >
         TailwindCSS
       </OutboundLink>

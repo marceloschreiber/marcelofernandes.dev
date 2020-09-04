@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: "pt sans,Helvetica,Arial,sans-serif",
+      sans: "Inter,Helvetica,Arial,sans-serif",
     },
     fontSize: {
       xs: ".75rem",

@@ -3,6 +3,8 @@ body,
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #gatsby-focus-wrapper {
@@ -12,6 +14,11 @@ body,
 
 main {
   flex: 1;
+}
+
+
+p {
+  color: #161e2e;
 }
 
 .burguer-btn:focus {
@@ -24,6 +31,7 @@ main {
   transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
   width: 100vw;
   height: 100vh;
+  z-index: 2;
 }
 
 .burguer-menu-hide {
@@ -54,9 +62,10 @@ main {
 }
 
 .blog-post p {
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 1.5rem;
   line-height: 1.5;
+  color: #161e2e;
 }
 
 .blog-post hr {
@@ -65,13 +74,10 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.blog-post code {
-  font-size: 0.875rem;
-}
-
 .blog-post ul {
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1.5;
+  color: #161e2e;
   list-style: disc;
   margin-left: 1rem;
   margin-bottom: 1.5rem;
@@ -84,14 +90,16 @@ main {
 }
 
 .blog-post .language-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
   background: #011627;
   color: #fff;
-  padding: 5px;
+  padding: 1px 5px 2px 5px;
 }
 
 .blog-post a {
   color: #2b6cb0;
-  text-decoration: underline;
 }
 
 .blog-post a:hover {
@@ -102,7 +110,8 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: white;
   background: none;
-  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-size: 1.1rem;
+  font-family: Inconsolata, monospace;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -241,7 +250,7 @@ pre[data-line] {
   margin-bottom: 1.75rem;
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #011627;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
@@ -269,4 +278,16 @@ blockquote {
 
 blockquote p {
   margin: 0 !important;
+}
+
+.svg-shadow {
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.darker-img:hover {
+  filter: brightness(0.75);
+}
+
+.title {
+  font-family: Oswald, Helvetica, Arial, sans-serif;
 }

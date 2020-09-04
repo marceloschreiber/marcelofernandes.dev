@@ -12,10 +12,6 @@ function Header({ siteTitle }) {
       link: "/blog",
     },
     {
-      label: "Today I Learned",
-      link: "/today-I-learned",
-    },
-    {
       label: "About",
       link: "/about",
     },
@@ -26,9 +22,9 @@ function Header({ siteTitle }) {
       <header className="bg-black antialised shadow-md text-gray-100 font-mono ">
         <div className="container mx-auto h-20 flex items-center justify-between px-4">
           <h1 className="text-2xl md:text-3xl font-bold font-sans pl-3 sm:pl-0">
-            <Link to="/about">{siteTitle}</Link>
+            <Link to="/">{siteTitle}</Link>
           </h1>
-          <nav className="uppercase font-semibold">
+          <nav className="uppercase font-semibold text-lg">
             <div className="sm:hidden">
               <HamburgerSqueeze
                 buttonWidth={25}
@@ -58,7 +54,7 @@ function Header({ siteTitle }) {
           {menuItems.map(menu => (
             <Link
               to={menu.link}
-              className="block hover:text-blue-600 hover:underline py-3"
+              className="block hover:text-blue-600 py-3 text-lg"
               onClick={() => setIsOpen(false)}
             >
               {menu.label}

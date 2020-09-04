@@ -6,7 +6,7 @@ spoiler: Dealing with large files is a pain.
 
 So at work we're in a project that requires manipulation of **large XML files**. I use a **MacBook Pro with 16GB of RAM** and can't open these files with vi, vim, visual code, etc.
 
-Luckly for me one of my tasks was to generate an **even bigger** file by combining some already large XML files. 😃
+Luckly for me one of my tasks was to generate an **even bigger** file by combining some already large XML files.
 
 These were the format of the original files:
 
