@@ -16,7 +16,7 @@ export function useScrollIndicator() {
     }
 
     window.addEventListener("scroll", listener)
-    return function() {
+    return function () {
       window.removeEventListener("scroll", listener)
     }
   }, [])

@@ -1,7 +1,7 @@
 ---
 title: "My .gitconfig"
 date: "2020-09-03"
-spoiler: I promise one day I will read the docs
+spoiler: I promise one day I will read the docs.
 ---
 
 **.gitconfig** is a file that stores your options/preferences, it can be located in several places but commonly we only modify the one at `~/.gitconfig`.

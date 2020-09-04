@@ -42,8 +42,8 @@ const AboutPage = () => {
           me to cloud nine.{" "}
         </p>
         <p className="my-4">
-          These posts are mainly to myself in order to have a knowledge base where I can
-          consult the problems that I have been through.
+          These posts are mainly to myself in order to have a knowledge base
+          where I can consult the problems that I have been through.
         </p>
         <div className="flex flex-col sm:flex-row sm:items-center pt-12 px-8">
           <Img
@@ -53,10 +53,16 @@ const AboutPage = () => {
           />
           <div className="flex-grow flex justify-around items-center sm:px-8 pt-8 sm:pt-0">
             <OutboundLink href="https://www.linkedin.com/in/msfernandes/">
-              <FaLinkedin size={64} className="hover:text-blue-600 transition-all duration-500 cursor-pointer svg-shadow" />
+              <FaLinkedin
+                size={64}
+                className="hover:text-blue-600 transition-all duration-500 cursor-pointer svg-shadow"
+              />
             </OutboundLink>
             <OutboundLink href="https://github.com/marceloschreiber">
-              <FaGithub size={64} className="hover:text-gray-700 transition-all duration-500 cursor-pointer svg-shadow" />
+              <FaGithub
+                size={64}
+                className="hover:text-gray-700 transition-all duration-500 cursor-pointer svg-shadow"
+              />
             </OutboundLink>
           </div>
         </div>

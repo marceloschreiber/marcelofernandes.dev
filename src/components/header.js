@@ -34,7 +34,7 @@ function Header({ siteTitle }) {
                 className="burguer-btn"
               />
             </div>
-            {menuItems.map(menu => (
+            {menuItems.map((menu) => (
               <Link
                 to={menu.link}
                 className="ml-10 hover:text-blue-600 hidden sm:inline"
@@ -51,7 +51,7 @@ function Header({ siteTitle }) {
             isOpen ? "burguer-menu-show" : "burguer-menu-hide"
           }`}
         >
-          {menuItems.map(menu => (
+          {menuItems.map((menu) => (
             <Link
               to={menu.link}
               className="block hover:text-blue-600 py-3 text-lg"
