@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { formatReadingTime } from "../utils/helpers"
 import { useScrollIndicator } from "../utils/scroolHook"
@@ -11,7 +10,7 @@ export default ({ data }) => {
   const scrollPercentage = useScrollIndicator()
 
   return (
-    <Layout>
+    <>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -33,7 +32,7 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
-    </Layout>
+    </>
   )
 }
 

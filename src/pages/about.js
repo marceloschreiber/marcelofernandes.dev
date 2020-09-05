@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const AboutPage = () => {
@@ -20,7 +19,7 @@ const AboutPage = () => {
     }
   `)
   return (
-    <Layout>
+    <>
       <SEO title="About" />
       <div className="max-w-2xl mx-auto font-sans px-6 py-10 text-lg">
         <h1 className="text-4xl font-bold">Hi there,</h1>
@@ -67,7 +66,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 

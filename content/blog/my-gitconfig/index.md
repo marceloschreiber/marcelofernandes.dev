@@ -21,6 +21,8 @@ Mine is nothing extraordinary:
     editor = vim
 [sequence]
     editor = rebase-editor
+[init]
+    defaultBranch = main
 ```
 
 Main points:
@@ -29,5 +31,6 @@ Main points:
 - **helper.autocorrect**: If I mistype something it will try to understand what I was doing and if it succeeds it will execute the command
 - **core.editor**: editor used for writing commits or tags
 - **sequence.editor**: editor that will be used while performing a `git rebase -i`
+- **init.defaultBranch**: when creating a new repository so I don't have to rename the **master** to **main**. (only available on git 2.28 forward)
 
 Refer to the [full documentation](https://git-scm.com/docs/git-config) for more options. It's very big and I will wait a few more years before reading it :p
