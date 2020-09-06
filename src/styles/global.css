@@ -16,7 +16,6 @@ main {
   flex: 1;
 }
 
-
 p {
   color: #161e2e;
 }
@@ -79,8 +78,8 @@ p {
   line-height: 1.5;
   color: #161e2e;
   list-style: disc;
-  margin-left: 1rem;
   margin-bottom: 1.5rem;
+  padding-inline-start: 30px;
 }
 
 .blog-post img {

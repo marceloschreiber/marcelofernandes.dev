@@ -23,6 +23,8 @@ Mine is nothing extraordinary:
     editor = rebase-editor
 [init]
     defaultBranch = main
+[pull]
+    ff = only
 ```
 
 Main points:
@@ -32,5 +34,6 @@ Main points:
 - **core.editor**: editor used for writing commits or tags
 - **sequence.editor**: editor that will be used while performing a `git rebase -i`
 - **init.defaultBranch**: when creating a new repository so I don't have to rename the **master** to **main**. (only available on git 2.28 forward)
+- **pull.ff**: pull is only allowed when the branch can be fast forwarded
 
 Refer to the [full documentation](https://git-scm.com/docs/git-config) for more options. It's very big and I will wait a few more years before reading it :p
