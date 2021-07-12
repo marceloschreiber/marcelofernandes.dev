@@ -27,11 +27,11 @@ const AboutPage = () => {
         <p className="my-4">
           I'm Marcelo Fernandes, a software developer at{" "}
           <OutboundLink
-            href="https://www.sap.com"
+            href="https://www.teamliquid.com/"
             target="_blank"
             className="font-bold text-blue-600 underline"
           >
-            SAP
+            Team Liquid
           </OutboundLink>
           .
         </p>

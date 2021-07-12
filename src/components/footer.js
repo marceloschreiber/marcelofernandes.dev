@@ -10,8 +10,9 @@ const Footer = () => (
         target="_blank"
         className="text-blue-600 underline"
       >
-        Site{" "}
+        Site
       </OutboundLink>
+      {` `}
       built with
       {` `}
       <OutboundLink
